@@ -10,3 +10,34 @@ Content-Type: application/json
     "image_url": "https://via.placeholder.com/150",
     "price": 100
 }
+
+###
+GET http://localhost:3000/orders
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiTHVjYXMiLCJpYXQiOjE3MDY3NTI3NDMsImV4cCI6MTcwNjc1MjgwM30.Dum5KKfc1y6VgEgjYpRVvEz9N46DjosoewiiPSemZNk
+
+{
+    "items": [
+        {
+            "product_id": "0df2a0c9-ed24-442d-b749-842db24bfb02",
+            "quantity": 1
+        },
+        {
+            "product_id": "1773eab2-ab18-4c64-b889-d49340dd07ad",
+            "quantity": 1
+        }
+    ],
+    "card_hash": "card_hash"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "Lucas",
+    "password": "12345"
+}
